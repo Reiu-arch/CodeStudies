@@ -54,3 +54,15 @@ END
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-01 01:35:43.714
 !MESSAGE Classpath changed for project: StartingHackerRank
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-01 16:52:41.302
+!MESSAGE Classpath changed for project: Starting
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-01 16:52:55.700
+!MESSAGE Classpath changed for project: Starting
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-01 16:53:42.559
+!MESSAGE Classpath changed for project: EasyProblems
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-01 16:54:20.196
+!MESSAGE Classpath changed for project: EasyArrays
