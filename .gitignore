@@ -22,6 +22,18 @@ Java/rankworkspace/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
 *.war
 *.ear
 
+.DS_Store
+Servers
+target
+build
+bin
+default
+.metadata
+.settings
+.gradle
+*.war
+*.bak
+
 target/
 bin/
 
