@@ -7,19 +7,30 @@ public class JavaDatatypes {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
         Scanner sc = new Scanner(System.in);
         
-        String numberCheck = sc.nextLine();
         
+        while(sc.hasNext()){
+        String numberCheck = sc.nextLine();
         try {
             long longNumber = Long.parseLong(numberCheck);
 
             System.out.println(longNumber+" can be fitted in:");
-        
+            if(longNumber > Short.MIN_VALUE && longNumber < Short.MAX_VALUE){
+                System.out.println("* short");
+            }
+            
+            if(longNumber > Integer.MIN_VALUE && longNumber < Integer.MAX_VALUE){
+                System.out.println("* int");
+                
+            }
        
+            System.out.println("* long");
         }
         //----------------------------------------------------------------\\
         catch(NumberFormatException e){
            System.out.println(numberCheck+" can't be fitted anywhere."); 
         }
+    
+    }
     sc.close();
     }
 	

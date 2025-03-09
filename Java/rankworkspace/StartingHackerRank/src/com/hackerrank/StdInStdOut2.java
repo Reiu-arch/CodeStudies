@@ -17,6 +17,7 @@ public class StdInStdOut2 {
     System.out.println("String: "+stringOne);
     System.out.println("Double: "+doubleOne);
     System.out.println("Int: "+integerOne);
+    sc.close();
     }
 }
 
