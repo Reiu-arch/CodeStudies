@@ -7,18 +7,24 @@ public class JavaDatatypes {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
         Scanner sc = new Scanner(System.in);
         
+        int numberOfQueries = sc.nextInt();
+        sc.nextLine();
         
-        while(sc.hasNext()){
+        for(int i = 0; i < numberOfQueries; i++){
         String numberCheck = sc.nextLine();
         try {
             long longNumber = Long.parseLong(numberCheck);
 
             System.out.println(longNumber+" can be fitted in:");
-            if(longNumber > Short.MIN_VALUE && longNumber < Short.MAX_VALUE){
+            if(longNumber >= Byte.MIN_VALUE && longNumber <= Byte.MAX_VALUE){
+                System.out.println("* byte");
+            }
+            
+            if(longNumber >= Short.MIN_VALUE && longNumber <= Short.MAX_VALUE){
                 System.out.println("* short");
             }
             
-            if(longNumber > Integer.MIN_VALUE && longNumber < Integer.MAX_VALUE){
+            if(longNumber >= Integer.MIN_VALUE && longNumber <= Integer.MAX_VALUE){
                 System.out.println("* int");
                 
             }
@@ -33,6 +39,5 @@ public class JavaDatatypes {
     }
     sc.close();
     }
-	
 
 }
