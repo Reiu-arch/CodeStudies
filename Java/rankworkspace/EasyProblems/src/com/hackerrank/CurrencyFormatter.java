@@ -1,7 +1,6 @@
 package com.hackerrank;
 
 import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.Currency;
 import java.util.Locale;
@@ -15,47 +14,20 @@ public class CurrencyFormatter {
         
         double munny = sc.nextDouble();
         
-        NumberFormat nF = NumberFormat.getCurrencyInstance();
+        NumberFormat US = NumberFormat.getCurrencyInstance();
         
-        nF.setCurrency(Currency.getInstance(Locale.US));
-        System.out.println("US: "+nF.format(munny));
+        US.setCurrency(Currency.getInstance(Locale.US));
+        DecimalFormat dfIndia = new DecimalFormat("#,###.00");
         
-        DecimalFormat df = new DecimalFormat("#,###.00");
-        String india = df.format(munny);
-        System.out.println("India: Rs."+ india);
-        
-//        NumberFormat china = NumberFormat.getCurrencyInstance(Locale.CHINA);
-//        System.out.println("China: "+china.format(munny));
-        
-        DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.CHINA);
-        symbols.setCurrencySymbol("\uFFE5");
-        
-        DecimalFormat chinaFormat = (DecimalFormat) DecimalFormat.getCurrencyInstance(Locale.CHINA);
-        chinaFormat.setDecimalFormatSymbols(symbols);
-        System.out.println("China: "+chinaFormat.format(munny));
-        
-        //HackerRank wants the full width Yuan symbol but java.format puts in the Yen symbol. Had to manually change it to Yuan
-        
-        // nF.setCurrency(Currency.getInstance(Locale.FRANCE));
-        // System.out.println("France: "+nF.format(munny));
-        
-        //this formatting incorrectly formats the input number
+        NumberFormat china = NumberFormat.getCurrencyInstance(Locale.CHINA);
+        NumberFormat france = NumberFormat.getCurrencyInstance(Locale.FRANCE);
         
         
-//        NumberFormat france = NumberFormat.getCurrencyInstance(Locale.FRANCE);
-//        System.out.println("France: "+france.format(munny));
-        
-        //not formatting correctly??
-        
-        DecimalFormat franceFormat = (DecimalFormat) DecimalFormat.getCurrencyInstance(Locale.FRANCE);
-        DecimalFormatSymbols franceSymbols = new DecimalFormatSymbols(Locale.FRANCE);
-        franceSymbols.setGroupingSeparator('\u202F');
-        franceFormat.setDecimalFormatSymbols(franceSymbols);
-        System.out.println("France: " + franceFormat.format(munny));
-        
-        //still not fomatting correctly???
+        System.out.println("US: "+US.format(munny));
+        System.out.println("India: Rs."+ dfIndia.format(munny));
+        System.out.println("China: "+ china.format(munny));
+        System.out.println("France: "+france.format(munny));
         
         sc.close();
     }
-
 }
